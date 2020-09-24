@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\eShopClone.Catalog.Infrastructure\eShopClone.Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\eShopClone.Catalog.Application\eShopClone.Catalog.Application.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+</Project>
