@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
 using eShopClone.Catalog.Infrastructure.EF;
+using eShopClone.Catalog.Infrastructure.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +32,8 @@ namespace eShopClone.Catalog.Api
                     .AddDbContext<CatalogContext>();
         }
 
+        public void ConfigureContainer(ContainerBuilder builder)
+            => builder.RegisterModule(new ContainerModule(Configuration));
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

@@ -4,6 +4,10 @@
     <ProjectReference Include="..\eShopClone.Catalog.Domain\eShopClone.Catalog.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
